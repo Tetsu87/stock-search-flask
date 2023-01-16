@@ -1,0 +1,374 @@
+body {
+    background-image: url(img/back.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-width: 100vh;
+    height: 250px;
+}
+
+.function-title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.ticker-input {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    height: 60px;
+}
+
+button {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: solid white 0;
+    border-radius: 10px 0 0 10px;
+}
+
+#submit-button{
+    width: 40px;
+    height: 40px;
+    box-shadow:1px 0.5px 2px 2px lightgray ;
+    border: white solid 0;
+    position: relative;
+}
+
+.input-area {
+    width: 400px;
+    height: 40px;
+    padding: 0;
+    color: gray;
+    border: none;
+    box-shadow: 2px 2.5px 2px lightgray;
+    z-index: 1;
+}
+
+.input-area:focus {
+    outline: none;
+}
+
+#clear-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 0 10px 10px 0;
+    background-color: white;
+    border-left: solid #f8f9fa 2px;
+    box-shadow: 1px 2px 2px 0.5px lightgray;
+    position: relative;
+    z-index: 2;
+}
+
+#submit-button img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    opacity: 0.3;
+    cursor: pointer;
+    border-color: white;
+    background-color: white;
+}
+
+#submit-button img:hover {
+    opacity: 0.7;
+}
+
+#clear-button img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    opacity: 0.3;
+    cursor: pointer;
+    border-color: white;
+    background-color: white;
+}
+
+#clear-button img:hover {
+    opacity: 0.7;
+}
+
+#error {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    width: 700px;
+    padding: 8px 0 8px 0;
+    background-color: lightgray;
+    margin-top: 15%;
+    margin-left: 40%;
+    display: none;
+    text-align: center;
+    border-radius: 8px;
+}
+
+#switch {
+    display: none;
+}
+
+.area {
+    width: 1200px;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.bar {
+    background-color: #f8f9fa;
+    flex-grow: 1;
+}
+
+.tab_class {
+    height: 50px;
+    padding: 0px 15px;
+    background-color: #f8f9fa;
+    line-height: 50px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    display: block;
+    float: left;
+    order: -1;
+}
+
+.tab_class:hover {
+    background-color: lightgray;
+}
+
+.tab_class {
+    cursor: pointer;
+}
+
+input[name="tab_name"] {
+    display: none;
+}
+
+input:checked+.tab_class {
+    background-color: darkgrey;
+}
+
+input:checked+.tab_class+.content_class {
+    display: block;
+    visibility: visible;
+}
+
+.content_class {
+    display: none;
+    width: 100%;
+    text-align: center;
+    line-height: 25px;
+}
+
+#logo {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 100px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.left_right_manager {
+    display: flex;
+    justify-content: center;
+}
+
+.left_content,
+.right_content{
+    width: 350px;
+}
+
+.left_content_2,
+.right_content_2{
+    width: 220px;
+}
+
+.left_content li {
+    border-top: lightgray solid 1px;
+    text-align: right;
+    padding: 5px 10px 5px 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.right_content li {
+    border-top: lightgray solid 1px;
+    text-align: left;
+    padding: 5px 0 5px 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.left_content_2 li {
+    border-top: lightgray solid 1px;
+    text-align: right;
+    padding: 5px 10px 5px 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.right_content_2 li {
+    border-top: lightgray solid 1px;
+    text-align: left;
+    padding: 5px 0 5px 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+ul li:last-child {
+    border-bottom: lightgray solid 1px;
+}
+
+.invisible_arrow {
+    display: none;
+}
+
+.upward_arrow {
+    display: inline-block;
+    transform: rotate(270deg);
+    color: #00FE00;
+}
+
+.downward_arrow {
+    display: inline-block;
+    transform: rotate(90deg);
+    color: #FE0000;
+}
+
+.indicator_property {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.strongSell,
+.sell,
+.hold,
+.buy,
+.strongBuy {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    border: solid white 0.1px;
+}
+
+.left_text {
+    color: #ED3839;
+    margin-right: 10px;
+}
+
+.strongSell {
+    background-color: #ED3839;
+}
+
+.sell {
+    background-color: #B25F4A;
+}
+
+.hold {
+    background-color: #77945C;
+}
+
+.buy {
+    background-color: #5DCB6E;
+}
+
+.strongBuy {
+    background-color: #72F57F;
+}
+
+.right_text {
+    color: #72F57F;
+    margin-left: 10px;
+}
+
+.recommend {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    margin-top: 20px;
+}
+
+#container {
+    height: 600px;
+    margin-top: 20px;
+}
+
+.news {
+    display: flex;
+    height: 100px;
+    background-color: #f8f9fa;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 30px 0px;
+}
+
+#logo1,
+#logo2,
+#logo3,
+#logo4,
+#logo5 {
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+}
+
+#Title1,
+#Title2,
+#Title3,
+#Title4,
+#Title5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+#Date1,
+#Date2,
+#Date3,
+#Date4,
+#Date5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+#Link1,
+#Link2,
+#Link3,
+#Link4,
+#Link5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+
+}
+
+.news_content {
+    padding: 10px;
+    align-self: flex-start;
+    text-align: left;
+}
